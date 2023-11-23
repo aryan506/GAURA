@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Land Records </title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Gaura Land Record Website</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="add.html">Add Record</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Search Land Records</h2>
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Enter Khata Number">
+        <button type="submit">Search</button>
+      </form>
+      <div id="searchResult"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Land Record Website. All rights reserved.</p>
+  </footer>
+  <script>
+    // JavaScript code for handling the search functionality
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      // Perform search and update searchResult div with the result
+      var searchInput = document.getElementById('searchInput');
+      var searchResult = document.getElementById('searchResult');
+      
+      // Simulating a search operation with a dummy result
+      var dummyResult = "Land record ID: " + searchInput.value;
+      
+      searchResult.textContent = dummyResult;
+      
+      // You can perform an actual search operation here using AJAX or fetch requests
+    });
+  </script>
+</body>
+</html>

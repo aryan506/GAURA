@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Land Record</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Gaura Land Record Website</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="add.html">Add Record</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Add Land Record</h2>
+      <form id="addForm">
+        <label for="recordId">Khata Number:</label>
+        <input type="text" id="recordId" required>
+        
+        <label for="ownerName">Plot Number:</label>
+        <input type="text" id="ownerName" required>
+        
+        <label for="propertyAddress">Property Address:</label>
+        <input type="text" id="propertyAddress" required>
+        
+        <button type="submit">Add Record</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Land Record Website. All rights reserved.</p>
+  </footer>
+  <script>
+    // JavaScript code for handling the add record functionality
+    document.getElementById('addForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      // Retrieve form input values
+      var recordId = document.getElementById('recordId').value;
+      var ownerName = document.getElementById('ownerName').value;
+      var propertyAddress = document.getElementById('propertyAddress').value;
+      
+      // Perform validation if needed
+      
+      // Create a new land record object or perform any additional processing as required
+      var newRecord = {
+        recordId: recordId,
+        ownerName: ownerName,
+        propertyAddress: propertyAddress
+      };
+      
+      // Simulating a record addition by displaying an alert
+      alert('Land record added successfully!');
+      
+      // You can perform an actual record addition operation here using AJAX or fetch requests
+    });
+  </script>
+</body>
+</html>
